@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GBTV - Entretenimento do seu jeito</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #050505;
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.92);
+            border-bottom: 1px solid #151515;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 900;
+            color: #168cff;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #ddd;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #168cff;
+        }
+
+        .header-button {
+            background: #168cff;
+            color: #fff;
+            padding: 12px 22px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .header-button:hover {
+            background: #006edc;
+            transform: translateY(-2px);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 720px;
+            padding: 150px 20px 80px;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 80% 30%, rgba(0, 132, 255, 0.25), transparent 35%),
+                linear-gradient(135deg, #050505 45%, #071625);
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(22, 140, 255, 0.12);
+            border: 1px solid rgba(22, 140, 255, 0.4);
+            color: #168cff;
+            padding: 8px 15px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #168cff;
+        }
+
+        .hero p {
+            color: #bdbdbd;
+            font-size: 19px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .primary-button {
+            background: #168cff;
+            padding: 16px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary-button:hover {
+            background: #0072df;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(22, 140, 255, 0.25);
+        }
+
+        .secondary-button {
+            border: 1px solid #333;
+            padding: 16px 28px;
+            border-radius: 8px;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .secondary-button:hover {
+            border-color: #168cff;
+            color: #168cff;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 90px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #999;
+            font-size: 17px;
+        }
+
+        /* BENEFITS */
+        .benefits {
+            background: #080808;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .benefit {
+            background: #101010;
+            border: 1px solid #1c1c1c;
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .benefit:hover {
+            transform: translateY(-6px);
+            border-color: #168cff;
+        }
+
+        .benefit-icon {
+            width: 65px;
+            height: 65px;
+            margin: auto auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(22, 140, 255, 0.12);
+            color: #168cff;
+            font-size: 28px;
+        }
+
+        .benefit h3 {
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .benefit p {
+            color: #999;
+            line-height: 1.5;
+        }
+
+        /* PLANOS */
+        .plans {
+            background: #050505;
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .plan {
+            background: #0d0d0d;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .plan:hover {
+            transform: translateY(-8px);
+            border-color: #168cff;
+        }
+
+        .plan.popular {
+            border: 2px solid #168cff;
+        }
+
+        .popular-label {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #168cff;
+            padding: 7px 18px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .plan h3 {
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .price small {
+            font-size: 15px;
+            color: #888;
+        }
+
+        .plan p {
+            color: #888;
+            margin-bottom: 25px;
+        }
+
+        .plan-button {
+            display: block;
+            width: 100%;
+            background: #168cff;
+            padding: 13px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .plan-button:hover {
+            background: #0072df;
+        }
+
+        /* DISPOSITIVOS */
+        .devices {
+            background: #080808;
+        }
+
+        .devices-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+        }
+
+        .device {
+            background: #101010;
+            border: 1px solid #1d1d1d;
+            border-radius: 10px;
+            padding: 25px 10px;
+            text-align: center;
+        }
+
+        .device-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .device p {
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            background:
+                radial-gradient(circle, rgba(22, 140, 255, 0.18), transparent 50%),
+                #050505;
+        }
+
+        .cta h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #999;
+            margin-bottom: 30px;
+            font-size: 17px;
+        }
+
+        /* FAQ */
+        .faq {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #222;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: #fff;
+            padding: 22px 0;
+            text-align: left;
+            font-size: 17px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            display: none;
+            color: #999;
+            line-height: 1.6;
+            padding: 0 0 20px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #020202;
+            border-top: 1px solid #151515;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer .logo {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25d366;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            z-index: 999;
+            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.35);
+            transition: 0.3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+
+            nav {
+                display: none;
+            }
+
+            .plans-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .devices-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .header-container {
+                height: 65px;
+            }
+
+            .logo {
+                font-size: 25px;
+            }
+
+            .header-button {
+                padding: 10px 15px;
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 650px;
+                padding-top: 120px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 65px 18px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .plans-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .devices-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta h2 {
+                font-size: 32px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .primary-button,
+            .secondary-button {
+                text-align: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+
+            <a href="#" class="logo">
+                GB<span>TV</span>
+            </a>
+
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#planos">Planos</a>
+                <a href="#dispositivos">Dispositivos</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <a
+                href="https://wa.me/5511980326756?text=Olá!%20Quero%20assinar%20a%20GBTV."
+                target="_blank"
+                class="header-button"
+            >
+                Assinar agora
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+        <div class="hero-container">
+
+            <div class="hero-content">
+
+                <div class="hero-tag">
+                    🚀 ATIVAÇÃO RÁPIDA
+                </div>
+
+                <h1>
+                    Seu entretenimento.
+                    <span>Do seu jeito.</span>
+                </h1>
+
+                <p>
+                    Tenha acesso à GBTV e aproveite seu entretenimento
+                    diretamente no dispositivo que você preferir.
+                    Escolha seu plano e comece agora.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#planos" class="primary-button">
+                        Ver planos
+                    </a>
+
+                    <a
+                        href="https://wa.me/5511980326756?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20GBTV."
+                        target="_blank"
+                        class="secondary-button"
+                    >
+                        Falar no WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BENEFÍCIOS -->
+    <section class="benefits" id="beneficios">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Por que escolher a GBTV?</h2>
+                <p>Uma experiência simples e prática.</p>
+            </div>
+
+            <div class="benefits-grid">
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        ⚡
+                    </div>
+
+                    <h3>Ativação rápida</h3>
+
+                    <p>
+                        Após a confirmação, receba as informações
+                        necessárias para começar.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        📱
+                    </div>
+
+                    <h3>Vários dispositivos</h3>
+
+                    <p>
+                        Use em dispositivos compatíveis como Smart TV,
+                        celular, computador e TV Stick.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        💬
+                    </div>
+
+                    <h3>Suporte</h3>
+
+                    <p>
+                        Precisa de ajuda? Entre em contato pelo WhatsApp.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PLANOS -->
+    <section class="plans" id="planos">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Escolha seu plano</h2>
+
+                <p>
+                    Selecione a duração que combina com você.
+                </p>
+
+            </div>
+
+
+            <div class="plans-grid">
+
+
+                <!-- 1 MÊS -->
+                <div class="plan">
+
+                    <h3>1 Mês</h3>
+
+                    <div class="price">
+                        R$20
+                        <small>/mês</small>
+                    </div>
+
+                    <p>Plano mensal</p>
+
+                    <a
+                        href="https://wa.me/5511980326756?text=Olá!%20Quero%20assinar%20o%20plano%20de%201%20mês%20da%20GBTV."
+                        target="_blank"
+                        class="plan-button"
+                    >
+                        Assinar agora
+                    </a>
+
+                </div>
+
+
+                <!-- 3 MESES -->
+                <div class="plan popular">
+
+                    <div class="popular-label">
+                        POPULAR
+                    </div>
+
+                    <h3>3 Meses</h3>
+
+                    <div class="price">
+                        R$50
+                    </div>
+
+                    <p>Plano trimestral</p>
+
+                    <a
+                        href="https://wa.me/5511980326756?text=Olá!%20Quero%20assinar%20o%20plano%20de%203%20meses%20da%20GBTV."
+                        target="_blank"
+                        class="plan-button"
+                    >
+                        Assinar agora
+                    </a>
+
+                </div>
+
+
+                <!-- 6 MESES -->
+                <div class="plan">
+
+                    <h3>6 Meses</h3>
+
+                    <div class="price">
+                        R$100
+                    </div>
+
+                    <p>Plano semestral</p>
+
+                    <a
+                        href="https://wa.me/5511980326756?text=Olá!%20Quero%20assinar%20o%20plano%20de%206%20meses%20da%20GBTV."
+                        target="_blank"
+                        class="plan-button"
+                    >
+                        Assinar agora
+                    </a>
+
+                </div>
+
+
+                <!-- 12 MESES -->
+                <div class="plan">
+
+                    <h3>12 Meses</h3>
+
+                    <div class="price">
+                        R$200
+                    </div>
+
+                    <p>Plano anual</p>
+
+                    <a
+                        href="https://wa.me/5511980326756?text=Olá!%20Quero%20assinar%20o%20plano%20de%2012%20meses%20da%20GBTV."
+                        target="_blank"
+                        class="plan-button"
+                    >
+                        Assinar agora
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DISPOSITIVOS -->
+    <section class="devices" id="dispositivos">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Assista onde quiser</h2>
+
+                <p>
+                    Compatível com diversos dispositivos.
+                </p>
+
+            </div>
+
+
+            <div class="devices-grid">
+
+                <div class="device">
+                    <div class="device-icon">📺</div>
+                    <p>Smart TV</p>
+                </div>
+
+                <div class="device">
+                    <div class="device-icon">📱</div>
+                    <p>Celular</p>
+                </div>
+
+                <div class="device">
+                    <div class="device-icon">💻</div>
+                    <p>Computador</p>
+                </div>
+
+                <div class="device">
+                    <div class="device-icon">📡</div>
+                    <p>TV Stick</p>
+                </div>
+
+                <div class="device">
+                    <div class="device-icon">🖥️</div>
+                    <p>Android TV</p>
+                </div>
+
+                <div class="device">
+                    <div class="device-icon">⚙️</div>
+                    <p>Outros</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+        <div class="container">
+
+            <h2>
+                Pronto para começar?
+            </h2>
+
+            <p>
+                Escolha seu plano e fale conosco pelo WhatsApp.
+            </p>
+
+            <a
+                href="https://wa.me/5511980326756?text=Olá!%20Quero%20assinar%20a%20GBTV."
+                target="_blank"
+                class="primary-button"
+            >
+                Quero assinar
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+    <section id="faq">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Perguntas frequentes</h2>
+
+                <p>
+                    Tire suas principais dúvidas.
+                </p>
+
+            </div>
+
+
+            <div class="faq">
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        Como faço para assinar?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        Escolha um dos planos disponíveis e clique em
+                        "Assinar agora". Você será direcionado para nosso
+                        WhatsApp para finalizar o atendimento.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        Quais dispositivos são compatíveis?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        A GBTV pode ser utilizada em dispositivos compatíveis
+                        como Smart TVs, celulares, computadores, TV Stick e
+                        Android TV.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        Como recebo minha assinatura?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        Após a confirmação do pagamento, nossa equipe envia
+                        as informações necessárias pelo WhatsApp.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+                        Preciso de ajuda para configurar?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        Sim. Caso tenha alguma dúvida durante a configuração,
+                        entre em contato pelo WhatsApp.
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            GB<span>TV</span>
+        </div>
+
+        <p>
+            © 2026 GBTV. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- BOTÃO WHATSAPP -->
+    <a
+        href="https://wa.me/5511980326756?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20GBTV."
+        target="_blank"
+        class="whatsapp"
+        aria-label="WhatsApp"
+    >
+        ☎
+    </a>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const faqQuestions = document.querySelectorAll(".faq-question");
+
+        faqQuestions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                const item = question.parentElement;
+
+                item.classList.toggle("active");
+
+                const icon = question.querySelector("span");
+
+                if (item.classList.contains("active")) {
+                    icon.textContent = "−";
+                } else {
+                    icon.textContent = "+";
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
