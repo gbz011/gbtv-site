@@ -247,6 +247,111 @@
             line-height: 1.5;
         }
 
+        /* PLATAFORMAS */
+        .platforms {
+            padding: 90px 20px;
+            background: #050505;
+        }
+
+        .platforms-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .platforms-title h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .platforms-title p {
+            color: #999;
+            font-size: 17px;
+        }
+
+        .platforms-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+        }
+
+        .platform-card {
+            height: 125px;
+            background: linear-gradient(145deg, #111a2b, #0b1220);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transition: 0.3s;
+            overflow: hidden;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-5px);
+            border-color: #168cff;
+            box-shadow: 0 10px 30px rgba(0, 119, 255, 0.15);
+        }
+
+        .platform-logo {
+            font-size: 24px;
+            font-weight: 800;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .platform-logo small {
+            display: block;
+            font-size: 11px;
+            color: #8fa1b8;
+            font-weight: normal;
+            margin-top: 6px;
+            letter-spacing: 0;
+        }
+
+        /* CORES DAS MARCAS */
+        .globoplay {
+            color: #ff4b91;
+        }
+
+        .prime {
+            color: #00a8e1;
+        }
+
+        .netflix {
+            color: #e50914;
+        }
+
+        .disney {
+            color: #4fa3ff;
+        }
+
+        .max {
+            color: #8b7cff;
+        }
+
+        .paramount {
+            color: #4db8ff;
+        }
+
+        .apple {
+            color: #fff;
+        }
+
+        .crunchyroll {
+            color: #ff8a3d;
+        }
+
+        .youtube {
+            color: #ff3333;
+        }
+
+        .premiere {
+            color: #ffd21f;
+        }
+
         /* PLANOS */
         .plans {
             background: #050505;
@@ -448,267 +553,306 @@
 
         /* RESPONSIVIDADE */
 
-/* Tablets e telas menores */
-@media (max-width: 900px) {
+        @media (max-width: 900px) {
 
-    nav {
-        display: none;
-    }
+            nav {
+                display: none;
+            }
 
-    .plans-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+            .plans-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
 
-    .devices-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+            .devices-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
 
-    .hero-content {
-        max-width: 650px;
-    }
-}
+            .platforms-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
 
+            .hero-content {
+                max-width: 650px;
+            }
+        }
 
-/* Celulares */
-@media (max-width: 600px) {
+        @media (max-width: 600px) {
 
-    body {
-        overflow-x: hidden;
-    }
+            body {
+                overflow-x: hidden;
+            }
 
-    /* HEADER */
-    .header-container {
-        height: 64px;
-        padding: 0 15px;
-    }
+            /* HEADER */
+            .header-container {
+                height: 64px;
+                padding: 0 15px;
+            }
 
-    .logo {
-        font-size: 25px;
-    }
+            .logo {
+                font-size: 25px;
+            }
 
-    .header-button {
-        padding: 10px 14px;
-        font-size: 13px;
-        border-radius: 6px;
-        white-space: nowrap;
-    }
+            .header-button {
+                padding: 10px 14px;
+                font-size: 13px;
+                border-radius: 6px;
+                white-space: nowrap;
+            }
 
+            /* HERO */
+            .hero {
+                min-height: auto;
+                padding: 120px 18px 70px;
+            }
 
-    /* HERO */
-    .hero {
-        min-height: auto;
-        padding: 120px 18px 70px;
-    }
+            .hero-content {
+                width: 100%;
+                max-width: 100%;
+            }
 
-    .hero-content {
-        width: 100%;
-        max-width: 100%;
-    }
+            .hero-tag {
+                font-size: 12px;
+                padding: 7px 12px;
+                margin-bottom: 18px;
+            }
 
-    .hero-tag {
-        font-size: 12px;
-        padding: 7px 12px;
-        margin-bottom: 18px;
-    }
+            .hero h1 {
+                font-size: clamp(38px, 11vw, 48px);
+                line-height: 1.05;
+                margin-bottom: 20px;
+            }
 
-    .hero h1 {
-        font-size: clamp(38px, 11vw, 48px);
-        line-height: 1.05;
-        margin-bottom: 20px;
-    }
+            .hero p {
+                font-size: 16px;
+                line-height: 1.55;
+                margin-bottom: 28px;
+            }
 
-    .hero p {
-        font-size: 16px;
-        line-height: 1.55;
-        margin-bottom: 28px;
-    }
+            .hero-buttons {
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+            }
 
-    .hero-buttons {
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
-    }
+            .primary-button,
+            .secondary-button {
+                width: 100%;
+                text-align: center;
+                padding: 15px 20px;
+            }
 
-    .primary-button,
-    .secondary-button {
-        width: 100%;
-        text-align: center;
-        padding: 15px 20px;
-    }
+            /* SEÇÕES */
+            section {
+                padding: 60px 16px;
+            }
 
+            .section-title {
+                margin-bottom: 35px;
+            }
 
-    /* SEÇÕES */
-    section {
-        padding: 60px 16px;
-    }
+            .section-title h2 {
+                font-size: 29px;
+                line-height: 1.15;
+            }
 
-    .section-title {
-        margin-bottom: 35px;
-    }
+            .section-title p {
+                font-size: 15px;
+                line-height: 1.5;
+            }
 
-    .section-title h2 {
-        font-size: 29px;
-        line-height: 1.15;
-    }
+            /* BENEFÍCIOS */
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
 
-    .section-title p {
-        font-size: 15px;
-        line-height: 1.5;
-    }
+            .benefit {
+                padding: 28px 20px;
+            }
 
+            .benefit h3 {
+                font-size: 19px;
+            }
 
-    /* BENEFÍCIOS */
-    .benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
+            .benefit p {
+                font-size: 15px;
+            }
 
-    .benefit {
-        padding: 28px 20px;
-    }
+            /* PLATAFORMAS */
+            .platforms {
+                padding: 60px 16px;
+            }
 
-    .benefit h3 {
-        font-size: 19px;
-    }
+            .platforms-title {
+                margin-bottom: 30px;
+            }
 
-    .benefit p {
-        font-size: 15px;
-    }
+            .platforms-title h2 {
+                font-size: 28px;
+                line-height: 1.15;
+            }
 
+            .platforms-title p {
+                font-size: 14px;
+                line-height: 1.5;
+            }
 
-    /* PLANOS */
-    .plans-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
+            .platforms-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
 
-    .plan {
-        padding: 30px 20px;
-    }
+            .platform-card {
+                height: 100px;
+                padding: 15px;
+            }
 
-    .plan h3 {
-        font-size: 20px;
-    }
+            .platform-logo {
+                font-size: 19px;
+            }
 
-    .price {
-        font-size: 38px;
-    }
+            .platform-logo small {
+                font-size: 9px;
+                margin-top: 4px;
+            }
 
-    .plan-button {
-        padding: 14px;
-        font-size: 15px;
-    }
+            /* PLANOS */
+            .plans-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
 
+            .plan {
+                padding: 30px 20px;
+            }
 
-    /* DISPOSITIVOS */
-    .devices-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
+            .plan h3 {
+                font-size: 20px;
+            }
 
-    .device {
-        padding: 20px 8px;
-    }
+            .price {
+                font-size: 38px;
+            }
 
-    .device-icon {
-        font-size: 28px;
-    }
+            .plan-button {
+                padding: 14px;
+                font-size: 15px;
+            }
 
-    .device p {
-        font-size: 13px;
-    }
+            /* DISPOSITIVOS */
+            .devices-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
 
+            .device {
+                padding: 20px 8px;
+            }
 
-    /* CTA */
-    .cta h2 {
-        font-size: 31px;
-        line-height: 1.15;
-    }
+            .device-icon {
+                font-size: 28px;
+            }
 
-    .cta p {
-        font-size: 15px;
-        line-height: 1.5;
-    }
+            .device p {
+                font-size: 13px;
+            }
 
+            /* CTA */
+            .cta h2 {
+                font-size: 31px;
+                line-height: 1.15;
+            }
 
-    /* FAQ */
-    .faq-question {
-        font-size: 15px;
-        line-height: 1.4;
-        padding: 20px 0;
-        gap: 15px;
-    }
+            .cta p {
+                font-size: 15px;
+                line-height: 1.5;
+            }
 
-    .faq-answer {
-        font-size: 14px;
-        line-height: 1.6;
-    }
+            /* FAQ */
+            .faq-question {
+                font-size: 15px;
+                line-height: 1.4;
+                padding: 20px 0;
+                gap: 15px;
+            }
 
+            .faq-answer {
+                font-size: 14px;
+                line-height: 1.6;
+            }
 
-    /* WHATSAPP */
-    .whatsapp {
-    width: 54px;
-    height: 54px;
-    right: 15px;
-    bottom: 70px;
-    font-size: 25px;
-}
-    
+            /* WHATSAPP */
+            .whatsapp {
+                width: 54px;
+                height: 54px;
+                right: 15px;
+                bottom: 70px;
+                font-size: 25px;
+            }
 
+            /* FOOTER */
+            footer {
+                padding: 35px 15px;
+            }
 
-    /* FOOTER */
-    footer {
-        padding: 35px 15px;
-    }
+            footer p {
+                font-size: 12px;
+                line-height: 1.5;
+            }
+        }
 
-    footer p {
-        font-size: 12px;
-        line-height: 1.5;
-    }
-}
+        @media (max-width: 380px) {
 
+            .header-container {
+                padding: 0 12px;
+            }
 
-/* Celulares muito pequenos */
-@media (max-width: 380px) {
+            .logo {
+                font-size: 23px;
+            }
 
-    .header-container {
-        padding: 0 12px;
-    }
+            .header-button {
+                padding: 9px 11px;
+                font-size: 12px;
+            }
 
-    .logo {
-        font-size: 23px;
-    }
+            .hero {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
 
-    .header-button {
-        padding: 9px 11px;
-        font-size: 12px;
-    }
+            .hero h1 {
+                font-size: 37px;
+            }
 
-    .hero {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+            .section-title h2 {
+                font-size: 27px;
+            }
 
-    .hero h1 {
-        font-size: 37px;
-    }
+            .devices-grid {
+                gap: 8px;
+            }
 
-    .section-title h2 {
-        font-size: 27px;
-    }
+            .device {
+                padding: 18px 5px;
+            }
 
-    .devices-grid {
-        gap: 8px;
-    }
+            .platforms-grid {
+                gap: 8px;
+            }
 
-    .device {
-        padding: 18px 5px;
-    }
-}
+            .platform-card {
+                height: 90px;
+            }
+
+            .platform-logo {
+                font-size: 17px;
+            }
+        }
     </style>
 </head>
 
@@ -725,6 +869,7 @@
             <nav>
                 <a href="#inicio">Início</a>
                 <a href="#beneficios">Benefícios</a>
+                <a href="#conteudos">Conteúdos</a>
                 <a href="#planos">Planos</a>
                 <a href="#dispositivos">Dispositivos</a>
                 <a href="#faq">FAQ</a>
@@ -843,6 +988,101 @@
                         Precisa de ajuda? Entre em contato pelo WhatsApp.
                     </p>
 
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PLATAFORMAS / CONTEÚDOS -->
+    <section class="platforms" id="conteudos">
+
+        <div class="container">
+
+            <div class="platforms-title">
+
+                <h2>Conteúdo para todos os gostos</h2>
+
+                <p>
+                    Uma grande variedade de conteúdos em um só lugar.
+                </p>
+
+            </div>
+
+
+            <div class="platforms-grid">
+
+                <div class="platform-card">
+                    <div class="platform-logo globoplay">
+                        Globoplay
+                        <small>Conteúdo brasileiro</small>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-logo prime">
+                        Prime Video
+                        <small>Filmes e séries</small>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-logo netflix">
+                        NETFLIX
+                        <small>Filmes e séries</small>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-logo disney">
+                        Disney+
+                        <small>Filmes e séries</small>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-logo max">
+                        max
+                        <small>Entretenimento</small>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-logo paramount">
+                        Paramount+
+                        <small>Filmes e séries</small>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-logo apple">
+                         tv+
+                        <small>Apple TV+</small>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-logo crunchyroll">
+                        Crunchyroll
+                        <small>Animes</small>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-logo youtube">
+                        YouTube
+                        <small>Vídeos</small>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-logo premiere">
+                        Premiere
+                        <small>Esportes</small>
+                    </div>
                 </div>
 
             </div>
