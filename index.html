@@ -92,18 +92,91 @@ header {
 }
 
 
-/* HERO */
+/* ================================================= */
+/* HERO PRINCIPAL */
+/* ================================================= */
+
 .hero {
     min-height: 100vh;
     padding: 150px 20px 90px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
     background:
-        radial-gradient(circle at 50% 20%, rgba(22,140,255,0.15), transparent 40%),
-        #050505;
+        linear-gradient(
+            rgba(2, 7, 14, 0.72),
+            rgba(2, 7, 14, 0.94)
+        ),
+        linear-gradient(
+            135deg,
+            #071a2f,
+            #050505 50%,
+            #06182a
+        );
 }
 
+
+/* FUNDO COM EFEITO DE CANAIS */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -80px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,5,5,0.95) 0%,
+            rgba(5,5,5,0.50) 50%,
+            rgba(5,5,5,0.90) 100%
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(22,140,255,0.08) 0px,
+            rgba(22,140,255,0.08) 160px,
+            transparent 160px,
+            transparent 320px
+        );
+
+    transform: perspective(700px) rotateX(8deg) scale(1.15);
+    opacity: 0.9;
+}
+
+
+/* BLOCOS VISUAIS NO FUNDO */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 15% 35%,
+            rgba(22,140,255,0.22),
+            transparent 22%
+        ),
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(0,119,255,0.16),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(22,140,255,0.12),
+            transparent 28%
+        );
+
+    pointer-events: none;
+}
+
+
 .hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 850px;
     margin: auto;
     text-align: center;
@@ -111,32 +184,112 @@ header {
 
 .hero-tag {
     display: inline-block;
-    background: rgba(22,140,255,0.1);
-    border: 1px solid rgba(22,140,255,0.3);
+    background: rgba(22,140,255,0.15);
+    border: 1px solid rgba(22,140,255,0.45);
     color: #168cff;
-    padding: 8px 15px;
+    padding: 8px 16px;
     border-radius: 30px;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 20px;
 }
 
 .hero h1 {
     font-size: 58px;
     line-height: 1.05;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
-.hero p {
-    color: #aaa;
+.hero h1 span {
+    color: #168cff;
+}
+
+.hero > .hero-content > p {
+    color: #ccc;
     max-width: 650px;
     margin: auto;
     font-size: 18px;
     line-height: 1.7;
 }
 
+
+/* TESTE GRÁTIS */
+
+.hero-test {
+    margin: 32px auto 0;
+    max-width: 520px;
+    padding: 24px;
+
+    background: rgba(5, 10, 18, 0.82);
+
+    border: 1px solid rgba(22,140,255,0.35);
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 15px 60px rgba(0,0,0,0.45),
+        0 0 35px rgba(22,140,255,0.08);
+}
+
+.hero-test-title {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.hero-test-title span {
+    color: #168cff;
+}
+
+.hero-test p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.hero-test-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    width: 100%;
+
+    padding: 15px 20px;
+
+    background: #25d366;
+    color: #fff;
+
+    border-radius: 10px;
+
+    font-weight: 900;
+    font-size: 15px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 25px rgba(37,211,102,0.20);
+}
+
+.hero-test-button:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 30px rgba(37,211,102,0.32);
+}
+
+.hero-test small {
+    display: block;
+    margin-top: 11px;
+    color: #777;
+    font-size: 11px;
+}
+
+
+/* BOTÕES */
+
 .hero-buttons {
-    margin-top: 30px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -167,74 +320,8 @@ header {
 }
 
 
-/* TESTE GRÁTIS */
-.free-test {
-    padding: 75px 20px;
-    background: linear-gradient(135deg, #071a2f, #06101d);
-    border-top: 1px solid rgba(22,140,255,0.15);
-    border-bottom: 1px solid rgba(22,140,255,0.15);
-}
-
-.free-test-content {
-    max-width: 850px;
-    margin: auto;
-    text-align: center;
-}
-
-.free-test-tag {
-    display: inline-block;
-    padding: 8px 15px;
-    border-radius: 30px;
-    background: rgba(22,140,255,0.12);
-    border: 1px solid rgba(22,140,255,0.3);
-    color: #168cff;
-    font-size: 13px;
-    font-weight: 800;
-    margin-bottom: 18px;
-}
-
-.free-test h2 {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.free-test p {
-    color: #aaa;
-    font-size: 17px;
-    line-height: 1.6;
-    max-width: 650px;
-    margin: 0 auto 27px;
-}
-
-.free-test-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    padding: 15px 32px;
-    border-radius: 10px;
-    background: #25d366;
-    color: #fff;
-    font-weight: 900;
-    font-size: 15px;
-    transition: 0.3s;
-    box-shadow: 0 8px 25px rgba(37,211,102,0.2);
-}
-
-.free-test-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(37,211,102,0.3);
-}
-
-.free-test small {
-    display: block;
-    margin-top: 15px;
-    color: #777;
-    font-size: 12px;
-}
-
-
 /* BENEFÍCIOS */
+
 .benefits {
     padding: 90px 20px;
 }
@@ -285,6 +372,7 @@ header {
 
 
 /* PLATAFORMAS */
+
 .platforms {
     padding: 90px 20px;
     background: #050505;
@@ -349,7 +437,8 @@ header {
 }
 
 
-/* CORES DAS MARCAS */
+/* CORES */
+
 .globoplay { color: #ff4b91; }
 .prime { color: #00a8e1; }
 .netflix { color: #e50914; }
@@ -363,6 +452,7 @@ header {
 
 
 /* PLANOS */
+
 .plans {
     padding: 90px 20px;
     background: #080808;
@@ -437,6 +527,7 @@ header {
 
 
 /* DISPOSITIVOS */
+
 .devices {
     padding: 90px 20px;
 }
@@ -468,6 +559,7 @@ header {
 
 
 /* CTA */
+
 .cta {
     padding: 90px 20px;
     background: linear-gradient(135deg, #071a2f, #050505);
@@ -486,6 +578,7 @@ header {
 
 
 /* FAQ */
+
 .faq {
     padding: 90px 20px;
     background: #080808;
@@ -521,6 +614,7 @@ header {
 
 
 /* FOOTER */
+
 footer {
     padding: 30px 20px;
     text-align: center;
@@ -530,6 +624,7 @@ footer {
 
 
 /* WHATSAPP */
+
 .whatsapp {
     position: fixed;
     right: 20px;
@@ -554,6 +649,7 @@ footer {
 
 
 /* RESPONSIVO */
+
 @media (max-width: 900px) {
 
     .nav-links {
@@ -585,32 +681,28 @@ footer {
 @media (max-width: 600px) {
 
     .hero {
-        padding-top: 120px;
+        padding: 120px 16px 60px;
     }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 38px;
     }
 
-    .hero p {
+    .hero > .hero-content > p {
         font-size: 15px;
     }
 
-    .free-test {
-        padding: 55px 18px;
+    .hero-test {
+        padding: 20px 16px;
+        margin-top: 25px;
     }
 
-    .free-test h2 {
-        font-size: 28px;
-        line-height: 1.2;
+    .hero-test-title {
+        font-size: 21px;
     }
 
-    .free-test p {
-        font-size: 14px;
-    }
-
-    .free-test-button {
-        width: 100%;
+    .hero-buttons {
+        margin-top: 20px;
     }
 
     .plans-grid {
@@ -669,6 +761,7 @@ footer {
         bottom: 70px;
         font-size: 25px;
     }
+
 }
 
 </style>
@@ -718,32 +811,67 @@ footer {
 </header>
 
 
-<!-- HERO -->
+<!-- ================================================= -->
+<!-- HERO PRINCIPAL -->
+<!-- ================================================= -->
 
 <section class="hero" id="inicio">
 
     <div class="hero-content">
 
         <span class="hero-tag">
-            🚀 ATIVAÇÃO RÁPIDA
+            📺 GBTV • ENTRETENIMENTO
         </span>
+
 
         <h1>
             Seu entretenimento.<br>
-            Do seu jeito.
+            <span>Do seu jeito.</span>
         </h1>
 
+
         <p>
-            Tenha acesso à GBTV e aproveite seu entretenimento
-            diretamente no dispositivo que você preferir.
-            Escolha seu plano e comece agora.
+            Tenha acesso ao seu entretenimento em um só lugar,
+            com ativação rápida e suporte pelo WhatsApp.
         </p>
+
+
+        <!-- TESTE GRÁTIS -->
+
+        <div class="hero-test">
+
+            <div class="hero-test-title">
+                🎁 Teste grátis por <span>3 dias</span>
+            </div>
+
+            <p>
+                Experimente a GBTV gratuitamente antes de escolher seu plano.
+            </p>
+
+            <a
+                href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20testar%20a%20GBTV%20gr%C3%A1tis%20por%203%20dias."
+                target="_blank"
+                class="hero-test-button"
+            >
+                💬 TESTAR GRÁTIS
+            </a>
+
+            <small>
+                Sem compromisso • Ativação rápida
+            </small>
+
+        </div>
+
 
         <div class="hero-buttons">
 
-            <a href="#planos" class="primary-button">
+            <a
+                href="#planos"
+                class="primary-button"
+            >
                 Ver planos
             </a>
+
 
             <a
                 href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20GBTV."
@@ -754,42 +882,6 @@ footer {
             </a>
 
         </div>
-
-    </div>
-
-</section>
-
-
-<!-- TESTE GRÁTIS -->
-
-<section class="free-test">
-
-    <div class="free-test-content">
-
-        <span class="free-test-tag">
-            ✨ TESTE GRÁTIS
-        </span>
-
-        <h2>
-            Teste a GBTV por 3 dias grátis
-        </h2>
-
-        <p>
-            Experimente a GBTV gratuitamente antes de escolher seu plano.
-            Fale conosco pelo WhatsApp e solicite seu teste.
-        </p>
-
-        <a
-            href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20testar%20a%20GBTV%20gr%C3%A1tis%20por%203%20dias."
-            target="_blank"
-            class="free-test-button"
-        >
-            💬 TESTAR GRÁTIS
-        </a>
-
-        <small>
-            Sem compromisso • Ativação rápida • Suporte
-        </small>
 
     </div>
 
@@ -816,6 +908,7 @@ footer {
 
 
         <div class="benefits-grid">
+
 
             <div class="benefit-card">
 
@@ -845,7 +938,8 @@ footer {
                 </h3>
 
                 <p>
-                    Use em dispositivos compatíveis como Smart TV, celular, computador e TV Stick.
+                    Use em dispositivos compatíveis como Smart TV, celular,
+                    computador e TV Stick.
                 </p>
 
             </div>
@@ -895,75 +989,106 @@ footer {
 
         <div class="platforms-grid">
 
+
             <div class="platform-card">
+
                 <div class="platform-logo globoplay">
                     Globoplay
                     <small>Conteúdo brasileiro</small>
                 </div>
+
             </div>
 
+
             <div class="platform-card">
+
                 <div class="platform-logo prime">
                     Prime Video
                     <small>Filmes e séries</small>
                 </div>
+
             </div>
 
+
             <div class="platform-card">
+
                 <div class="platform-logo netflix">
                     NETFLIX
                     <small>Filmes e séries</small>
                 </div>
+
             </div>
 
+
             <div class="platform-card">
+
                 <div class="platform-logo disney">
                     Disney+
                     <small>Filmes e séries</small>
                 </div>
+
             </div>
 
+
             <div class="platform-card">
+
                 <div class="platform-logo max">
                     max
                     <small>Entretenimento</small>
                 </div>
+
             </div>
 
+
             <div class="platform-card">
+
                 <div class="platform-logo paramount">
                     Paramount+
                     <small>Filmes e séries</small>
                 </div>
+
             </div>
 
+
             <div class="platform-card">
+
                 <div class="platform-logo apple">
                      tv+
                     <small>Apple TV+</small>
                 </div>
+
             </div>
 
+
             <div class="platform-card">
+
                 <div class="platform-logo crunchyroll">
                     Crunchyroll
                     <small>Animes</small>
                 </div>
+
             </div>
 
+
             <div class="platform-card">
+
                 <div class="platform-logo youtube">
                     YouTube
                     <small>Vídeos</small>
                 </div>
+
             </div>
 
+
             <div class="platform-card">
+
                 <div class="platform-logo premiere">
                     Premiere
                     <small>Esportes</small>
                 </div>
+
             </div>
+
 
         </div>
 
@@ -1097,6 +1222,7 @@ footer {
 
             </div>
 
+
         </div>
 
     </div>
@@ -1124,6 +1250,7 @@ footer {
 
 
         <div class="devices-grid">
+
 
             <div class="device-card">
 
@@ -1202,6 +1329,7 @@ footer {
 
             </div>
 
+
         </div>
 
     </div>
@@ -1262,8 +1390,9 @@ footer {
                 </div>
 
                 <div class="faq-answer">
-                    Escolha um dos planos disponíveis e clique em "Assinar agora".
-                    Você será direcionado para nosso WhatsApp para finalizar o atendimento.
+                    Escolha um dos planos disponíveis e clique em
+                    "Assinar agora". Você será direcionado para nosso
+                    WhatsApp para finalizar o atendimento.
                 </div>
 
             </div>
@@ -1277,8 +1406,8 @@ footer {
                 </div>
 
                 <div class="faq-answer">
-                    A GBTV pode ser utilizada em dispositivos compatíveis como Smart TVs,
-                    celulares, computadores, TV Stick e Android TV.
+                    A GBTV pode ser utilizada em dispositivos compatíveis
+                    como Smart TVs, celulares, computadores, TV Stick e Android TV.
                 </div>
 
             </div>
@@ -1292,8 +1421,8 @@ footer {
                 </div>
 
                 <div class="faq-answer">
-                    Após a confirmação do pagamento, nossa equipe envia as informações
-                    necessárias pelo WhatsApp.
+                    Após a confirmação do pagamento, nossa equipe envia
+                    as informações necessárias pelo WhatsApp.
                 </div>
 
             </div>
@@ -1326,7 +1455,7 @@ footer {
 <footer>
 
     <div>
-        GB TV
+        GBTV
     </div>
 
     <div>
@@ -1336,7 +1465,7 @@ footer {
 </footer>
 
 
-<!-- WHATSAPP -->
+<!-- WHATSAPP FLUTUANTE -->
 
 <a
     href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20GBTV."
