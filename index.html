@@ -14,6 +14,21 @@
   gtag('js', new Date());
 
   gtag('config', 'AW-18464855196');
+
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18464855196/CpKDCM2Sh44dEJyp3eRE',
+      'event_callback': callback
+    });
+
+    return false;
+  }
 </script>
 
 <title>GBTV - Entretenimento do seu jeito</title>
@@ -735,515 +750,523 @@
 
 <body>
 
-```
 <header>
 
-    <div class="header-content">
+```
+<div class="header-content">
 
-        <a href="#inicio" class="logo">
-            GBTV
-        </a>
+    <a href="#inicio" class="logo">
+        GBTV
+    </a>
 
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#beneficios">Benefícios</a>
-            <a href="#conteudos">Conteúdos</a>
-            <a href="#planos">Planos</a>
-            <a href="#dispositivos">Dispositivos</a>
-            <a href="#faq">FAQ</a>
-        </nav>
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#conteudos">Conteúdos</a>
+        <a href="#planos">Planos</a>
+        <a href="#dispositivos">Dispositivos</a>
+        <a href="#faq">FAQ</a>
+    </nav>
 
-        <a
-            href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20assinar%20a%20GBTV."
-            target="_blank"
-            class="header-button"
-        >
-            Assinar agora
-        </a>
+    <a
+        href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20assinar%20a%20GBTV."
+        class="header-button"
+        onclick="return gtag_report_conversion(this.href);"
+    >
+        Assinar agora
+    </a>
 
-    </div>
+</div>
+```
 
 </header>
 
 <section class="hero" id="inicio">
 
-    <div class="hero-content">
+```
+<div class="hero-content">
 
-        <span class="hero-tag">
-            📺 GBTV • ENTRETENIMENTO
-        </span>
+    <span class="hero-tag">
+        📺 GBTV • ENTRETENIMENTO
+    </span>
 
-        <h1>
-            Seu entretenimento.<br>
-            <span>Do seu jeito.</span>
-        </h1>
+    <h1>
+        Seu entretenimento.<br>
+        <span>Do seu jeito.</span>
+    </h1>
+
+    <p>
+        Tenha acesso a um IPTV completo, com ativação rápida e suporte pelo WhatsApp.
+    </p>
+
+    <div class="hero-test">
+
+        <div class="hero-test-title">
+            🎁 <span>Teste grátis</span>
+        </div>
 
         <p>
-            Tenha acesso a um IPTV completo, com ativação rápida e suporte pelo WhatsApp.
+            Experimente a GBTV gratuitamente antes de escolher seu plano.
         </p>
 
-        <div class="hero-test">
+        <a
+            href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20testar%20a%20GBTV%20gr%C3%A1tis."
+            class="hero-test-button"
+            onclick="return gtag_report_conversion(this.href);"
+        >
+            💬 TESTAR AGORA
+        </a>
 
-            <div class="hero-test-title">
-                🎁 <span>Teste grátis</span>
-            </div>
-
-            <p>
-                Experimente a GBTV gratuitamente antes de escolher seu plano.
-            </p>
-
-            <a
-                href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20testar%20a%20GBTV%20gr%C3%A1tis."
-                target="_blank"
-                class="hero-test-button"
-            >
-                💬 TESTAR AGORA
-            </a>
-
-            <small>
-                Sem compromisso • Ativação rápida
-            </small>
-
-        </div>
-
-        <div class="hero-buttons">
-
-            <a href="#planos" class="primary-button">
-                Ver planos
-            </a>
-
-            <a
-                href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20GBTV."
-                target="_blank"
-                class="secondary-button"
-            >
-                Falar no WhatsApp
-            </a>
-
-        </div>
+        <small>
+            Sem compromisso • Ativação rápida
+        </small>
 
     </div>
+
+    <div class="hero-buttons">
+
+        <a href="#planos" class="primary-button">
+            Ver planos
+        </a>
+
+        <a
+            href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20GBTV."
+            class="secondary-button"
+            onclick="return gtag_report_conversion(this.href);"
+        >
+            Falar no WhatsApp
+        </a>
+
+    </div>
+
+</div>
+```
 
 </section>
 
 <section class="benefits" id="beneficios">
 
-    <div class="benefits-grid">
+```
+<div class="benefits-grid">
 
-        <div class="benefit-card">
-
-            <div class="benefit-icon">⚡</div>
-
-            <h3>Ativação rápida</h3>
-
-            <p>
-                Receba sua assinatura e comece a utilizar rapidamente.
-            </p>
-
-        </div>
-
-        <div class="benefit-card">
-
-            <div class="benefit-icon">📱</div>
-
-            <h3>Vários dispositivos</h3>
-
-            <p>
-                Utilize em Smart TV, celular, computador, TV Stick e outros dispositivos compatíveis.
-            </p>
-
-        </div>
-
-        <div class="benefit-card">
-
-            <div class="benefit-icon">💬</div>
-
-            <h3>Suporte</h3>
-
-            <p>
-                Conte com suporte pelo WhatsApp para ajudar na configuração.
-            </p>
-
-        </div>
-
+    <div class="benefit-card">
+        <div class="benefit-icon">⚡</div>
+        <h3>Ativação rápida</h3>
+        <p>
+            Receba sua assinatura e comece a utilizar rapidamente.
+        </p>
     </div>
+
+    <div class="benefit-card">
+        <div class="benefit-icon">📱</div>
+        <h3>Vários dispositivos</h3>
+        <p>
+            Utilize em Smart TV, celular, computador, TV Stick e outros dispositivos compatíveis.
+        </p>
+    </div>
+
+    <div class="benefit-card">
+        <div class="benefit-icon">💬</div>
+        <h3>Suporte</h3>
+        <p>
+            Conte com suporte pelo WhatsApp para ajudar na configuração.
+        </p>
+    </div>
+
+</div>
+```
 
 </section>
 
 <section class="platforms" id="conteudos">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="platforms-title">
+    <div class="platforms-title">
+        <h2>
+            Conteúdo para todos os gostos
+        </h2>
 
-            <h2>
-                Conteúdo para todos os gostos
-            </h2>
+        <p>
+            Uma grande variedade de conteúdos em um só lugar.
+        </p>
+    </div>
 
-            <p>
-                Uma grande variedade de conteúdos em um só lugar.
-            </p>
+    <div class="platforms-grid">
 
+        <div class="platform-card">
+            <div class="platform-logo globoplay">
+                Globoplay
+                <small>Conteúdo brasileiro</small>
+            </div>
         </div>
 
-        <div class="platforms-grid">
-
-            <div class="platform-card">
-                <div class="platform-logo globoplay">
-                    Globoplay
-                    <small>Conteúdo brasileiro</small>
-                </div>
+        <div class="platform-card">
+            <div class="platform-logo prime">
+                Prime Video
+                <small>Filmes e séries</small>
             </div>
+        </div>
 
-            <div class="platform-card">
-                <div class="platform-logo prime">
-                    Prime Video
-                    <small>Filmes e séries</small>
-                </div>
+        <div class="platform-card">
+            <div class="platform-logo netflix">
+                NETFLIX
+                <small>Filmes e séries</small>
             </div>
+        </div>
 
-            <div class="platform-card">
-                <div class="platform-logo netflix">
-                    NETFLIX
-                    <small>Filmes e séries</small>
-                </div>
+        <div class="platform-card">
+            <div class="platform-logo disney">
+                Disney+
+                <small>Filmes e séries</small>
             </div>
+        </div>
 
-            <div class="platform-card">
-                <div class="platform-logo disney">
-                    Disney+
-                    <small>Filmes e séries</small>
-                </div>
+        <div class="platform-card">
+            <div class="platform-logo max">
+                max
+                <small>Entretenimento</small>
             </div>
+        </div>
 
-            <div class="platform-card">
-                <div class="platform-logo max">
-                    max
-                    <small>Entretenimento</small>
-                </div>
+        <div class="platform-card">
+            <div class="platform-logo paramount">
+                Paramount+
+                <small>Filmes e séries</small>
             </div>
+        </div>
 
-            <div class="platform-card">
-                <div class="platform-logo paramount">
-                    Paramount+
-                    <small>Filmes e séries</small>
-                </div>
+        <div class="platform-card">
+            <div class="platform-logo apple">
+                 tv+
+                <small>Apple TV+</small>
             </div>
+        </div>
 
-            <div class="platform-card">
-                <div class="platform-logo apple">
-                     tv+
-                    <small>Apple TV+</small>
-                </div>
+        <div class="platform-card">
+            <div class="platform-logo crunchyroll">
+                Crunchyroll
+                <small>Animes</small>
             </div>
+        </div>
 
-            <div class="platform-card">
-                <div class="platform-logo crunchyroll">
-                    Crunchyroll
-                    <small>Animes</small>
-                </div>
+        <div class="platform-card">
+            <div class="platform-logo youtube">
+                YouTube
+                <small>Vídeos</small>
             </div>
+        </div>
 
-            <div class="platform-card">
-                <div class="platform-logo youtube">
-                    YouTube
-                    <small>Vídeos</small>
-                </div>
+        <div class="platform-card">
+            <div class="platform-logo premiere">
+                Premiere
+                <small>Esportes</small>
             </div>
-
-            <div class="platform-card">
-                <div class="platform-logo premiere">
-                    Premiere
-                    <small>Esportes</small>
-                </div>
-            </div>
-
         </div>
 
     </div>
+
+</div>
+```
 
 </section>
 
 <section class="plans" id="planos">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="plans-title">
+    <div class="plans-title">
 
-            <h2>
-                Escolha seu plano
-            </h2>
+        <h2>
+            Escolha seu plano
+        </h2>
+
+        <p>
+            Tenha acesso ao entretenimento que você procura.
+        </p>
+
+    </div>
+
+    <div class="plans-grid">
+
+        <div class="plan-card">
+
+            <h3>1 Mês</h3>
+
+            <div class="plan-price">
+                R$19,90
+                <small>/mês</small>
+            </div>
 
             <p>
-                Tenha acesso ao entretenimento que você procura.
+                Acesso durante 1 mês.
             </p>
+
+            <a
+                href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20de%201%20m%C3%AAs%20da%20GBTV."
+                class="plan-button"
+                onclick="return gtag_report_conversion(this.href);"
+            >
+                Assinar
+            </a>
 
         </div>
 
-        <div class="plans-grid">
+        <div class="plan-card popular">
 
-            <div class="plan-card">
-
-                <h3>1 Mês</h3>
-
-                <div class="plan-price">
-                    R$19,90
-                    <small>/mês</small>
-                </div>
-
-                <p>
-                    Acesso durante 1 mês.
-                </p>
-
-                <a
-                    href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20de%201%20m%C3%AAs%20da%20GBTV."
-                    target="_blank"
-                    class="plan-button"
-                >
-                    Assinar
-                </a>
-
+            <div class="popular-badge">
+                POPULAR
             </div>
 
-            <div class="plan-card popular">
+            <h3>3 Meses</h3>
 
-                <div class="popular-badge">
-                    POPULAR
-                </div>
-
-                <h3>3 Meses</h3>
-
-                <div class="plan-price">
-                    R$49,90
-                </div>
-
-                <p>
-                    Acesso durante 3 meses.
-                </p>
-
-                <a
-                    href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20de%203%20meses%20da%20GBTV."
-                    target="_blank"
-                    class="plan-button"
-                >
-                    Assinar
-                </a>
-
+            <div class="plan-price">
+                R$49,90
             </div>
 
-            <div class="plan-card">
+            <p>
+                Acesso durante 3 meses.
+            </p>
 
-                <h3>6 Meses</h3>
+            <a
+                href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20de%203%20meses%20da%20GBTV."
+                class="plan-button"
+                onclick="return gtag_report_conversion(this.href);"
+            >
+                Assinar
+            </a>
 
-                <div class="plan-price">
-                    R$99,90
-                </div>
+        </div>
 
-                <p>
-                    Acesso durante 6 meses.
-                </p>
+        <div class="plan-card">
 
-                <a
-                    href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20de%206%20meses%20da%20GBTV."
-                    target="_blank"
-                    class="plan-button"
-                >
-                    Assinar
-                </a>
+            <h3>6 Meses</h3>
 
+            <div class="plan-price">
+                R$99,90
             </div>
 
-            <div class="plan-card">
+            <p>
+                Acesso durante 6 meses.
+            </p>
 
-                <h3>12 Meses</h3>
+            <a
+                href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20de%206%20meses%20da%20GBTV."
+                class="plan-button"
+                onclick="return gtag_report_conversion(this.href);"
+            >
+                Assinar
+            </a>
 
-                <div class="plan-price">
-                    R$199,90
-                </div>
+        </div>
 
-                <p>
-                    Acesso durante 12 meses.
-                </p>
+        <div class="plan-card">
 
-                <a
-                    href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20de%2012%20meses%20da%20GBTV."
-                    target="_blank"
-                    class="plan-button"
-                >
-                    Assinar
-                </a>
+            <h3>12 Meses</h3>
 
+            <div class="plan-price">
+                R$199,90
             </div>
+
+            <p>
+                Acesso durante 12 meses.
+            </p>
+
+            <a
+                href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20de%2012%20meses%20da%20GBTV."
+                class="plan-button"
+                onclick="return gtag_report_conversion(this.href);"
+            >
+                Assinar
+            </a>
 
         </div>
 
     </div>
+
+</div>
+```
 
 </section>
 
 <section class="devices" id="dispositivos">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="devices-title">
+    <div class="devices-title">
 
-            <h2>
-                Onde assistir?
-            </h2>
+        <h2>
+            Onde assistir?
+        </h2>
 
-            <p>
-                Use a GBTV nos seus dispositivos compatíveis.
-            </p>
+        <p>
+            Use a GBTV nos seus dispositivos compatíveis.
+        </p>
 
+    </div>
+
+    <div class="devices-grid">
+
+        <div class="device-card">
+            <div class="device-icon">📺</div>
+            <h3>Smart TV</h3>
         </div>
 
-        <div class="devices-grid">
+        <div class="device-card">
+            <div class="device-icon">📱</div>
+            <h3>Celular</h3>
+        </div>
 
-            <div class="device-card">
-                <div class="device-icon">📺</div>
-                <h3>Smart TV</h3>
-            </div>
+        <div class="device-card">
+            <div class="device-icon">💻</div>
+            <h3>Computador</h3>
+        </div>
 
-            <div class="device-card">
-                <div class="device-icon">📱</div>
-                <h3>Celular</h3>
-            </div>
+        <div class="device-card">
+            <div class="device-icon">📡</div>
+            <h3>TV Stick</h3>
+        </div>
 
-            <div class="device-card">
-                <div class="device-icon">💻</div>
-                <h3>Computador</h3>
-            </div>
+        <div class="device-card">
+            <div class="device-icon">📺</div>
+            <h3>Android TV</h3>
+        </div>
 
-            <div class="device-card">
-                <div class="device-icon">📡</div>
-                <h3>TV Stick</h3>
-            </div>
-
-            <div class="device-card">
-                <div class="device-icon">📺</div>
-                <h3>Android TV</h3>
-            </div>
-
-            <div class="device-card">
-                <div class="device-icon">➕</div>
-                <h3>Outros</h3>
-            </div>
-
+        <div class="device-card">
+            <div class="device-icon">➕</div>
+            <h3>Outros</h3>
         </div>
 
     </div>
+
+</div>
+```
 
 </section>
 
 <section class="cta">
 
-    <div class="container">
+```
+<div class="container">
 
-        <h2>
-            Pronto para começar?
-        </h2>
+    <h2>
+        Pronto para começar?
+    </h2>
 
-        <p>
-            Escolha seu plano e fale conosco pelo WhatsApp.
-        </p>
+    <p>
+        Escolha seu plano e fale conosco pelo WhatsApp.
+    </p>
 
-        <a
-            href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20assinar%20a%20GBTV."
-            target="_blank"
-            class="primary-button"
-        >
-            Quero assinar
-        </a>
+    <a
+        href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20assinar%20a%20GBTV."
+        class="primary-button"
+        onclick="return gtag_report_conversion(this.href);"
+    >
+        Quero assinar
+    </a>
 
-    </div>
+</div>
+```
 
 </section>
 
 <section class="faq" id="faq">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="faq-title">
+    <div class="faq-title">
 
-            <h2>
-                Perguntas frequentes
-            </h2>
+        <h2>
+            Perguntas frequentes
+        </h2>
+
+    </div>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+
+            <div class="faq-question">
+                Como faço para assinar?
+                <span>+</span>
+            </div>
+
+            <div class="faq-answer">
+                Escolha um dos planos disponíveis e clique em "Assinar". Você será direcionado para o WhatsApp para finalizar sua assinatura.
+            </div>
 
         </div>
 
-        <div class="faq-container">
+        <div class="faq-item">
 
-            <div class="faq-item">
-
-                <div class="faq-question">
-                    Como faço para assinar?
-                    <span>+</span>
-                </div>
-
-                <div class="faq-answer">
-                    Escolha um dos planos disponíveis e clique em "Assinar". Você será direcionado para o WhatsApp para finalizar sua assinatura.
-                </div>
-
+            <div class="faq-question">
+                Quais dispositivos são compatíveis?
+                <span>+</span>
             </div>
 
-            <div class="faq-item">
-
-                <div class="faq-question">
-                    Quais dispositivos são compatíveis?
-                    <span>+</span>
-                </div>
-
-                <div class="faq-answer">
-                    A GBTV pode ser utilizada em dispositivos compatíveis como Smart TVs, celulares, computadores, TV Stick e Android TV.
-                </div>
-
+            <div class="faq-answer">
+                A GBTV pode ser utilizada em dispositivos compatíveis como Smart TVs, celulares, computadores, TV Stick e Android TV.
             </div>
 
-            <div class="faq-item">
+        </div>
 
-                <div class="faq-question">
-                    Como recebo minha assinatura?
-                    <span>+</span>
-                </div>
+        <div class="faq-item">
 
-                <div class="faq-answer">
-                    Após a confirmação do pagamento, você recebe as orientações necessárias pelo WhatsApp.
-                </div>
-
+            <div class="faq-question">
+                Como recebo minha assinatura?
+                <span>+</span>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-answer">
+                Após a confirmação do pagamento, você recebe as orientações necessárias pelo WhatsApp.
+            </div>
 
-                <div class="faq-question">
-                    Preciso de ajuda para configurar?
-                    <span>+</span>
-                </div>
+        </div>
 
-                <div class="faq-answer">
-                    Sim. Caso precise de ajuda para baixar, instalar ou configurar, entre em contato pelo WhatsApp.
-                </div>
+        <div class="faq-item">
 
+            <div class="faq-question">
+                Preciso de ajuda para configurar?
+                <span>+</span>
+            </div>
+
+            <div class="faq-answer">
+                Sim. Caso precise de ajuda para baixar, instalar ou configurar, entre em contato pelo WhatsApp.
             </div>
 
         </div>
 
     </div>
 
+</div>
+```
+
 </section>
 
 <footer>
 
-    © 2026 GBTV. Todos os direitos reservados.
+```
+© 2026 GBTV. Todos os direitos reservados.
+```
 
 </footer>
 
 <a
-    href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20GBTV."
-    target="_blank"
-    class="whatsapp"
-    aria-label="WhatsApp"
+href="https://wa.me/5511980326756?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20GBTV."
+class="whatsapp"
+aria-label="WhatsApp"
+onclick="return gtag_report_conversion(this.href);"
+
 >
-    ☎
+
+```
+☎
+```
+
 </a>
 
 <script>
@@ -1263,7 +1286,6 @@
     });
 
 </script>
-```
 
 </body>
 </html>
